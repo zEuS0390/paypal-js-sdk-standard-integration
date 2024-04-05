@@ -8,6 +8,8 @@ const __dirname = path.dirname(__filename);
 const PORT = 8889;
 const app = express();
 
+app.use("/static", express.static(path.join(__dirname, "static")));
+
 // Set the MIME type for .js files
 app.use(
   express.static(__dirname, {
